@@ -48,3 +48,4 @@ resim alanı
     </main>
   );
 }
+""
