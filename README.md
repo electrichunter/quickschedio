@@ -24,10 +24,7 @@ QuickSchedio, kullanıcıların kolayca randevu oluşturup yönetebileceği mode
 ## Kurulum
 
 1. Depoyu klonlayın:
-    ```bash
-    git clone https://github.com/kullaniciadi/quickschedio.git
-    cd quickschedio
-    ```
+ 
 
 2. Bağımlılıkları yükleyin:
     ```bash
