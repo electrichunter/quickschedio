@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuickSchedio
 
-## Getting Started
+[https://quickschedio.netlify.app/](https://quickschedio.netlify.app/)  
+Hızlı ve pratik randevu planlama uygulaması.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Proje Hakkında
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+QuickSchedio, kullanıcıların kolayca randevu oluşturup yönetebileceği modern, hızlı ve kullanıcı dostu bir web uygulamasıdır. Next.js ve Tailwind CSS ile geliştirilmiş olup, kimlik doğrulama için JWT tabanlı sistem kullanmaktadır.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Özellikler
 
-## Learn More
+- Kullanıcı kayıt ve giriş işlemleri
+- JWT ile güvenli kimlik doğrulama
+- Mail doğrulama (e-posta aktivasyonu) sistemi
+- Randevu oluşturma, listeleme ve düzenleme
+- Mobil uyumlu responsive tasarım
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Kurulum
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Depoyu klonlayın:
+    ```bash
+    git clone https://github.com/kullaniciadi/quickschedio.git
+    cd quickschedio
+    ```
 
-## Deploy on Vercel
+2. Bağımlılıkları yükleyin:
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Ortam değişkenlerini ayarlayın (`.env.local`):
+    ```env
+    NEXT_PUBLIC_API_URL=https://api.quickschedio.netlify.app
+    JWT_SECRET=your_jwt_secret_key
+    EMAIL_SERVICE_API_KEY=your_email_service_api_key
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Geliştirme sunucusunu başlatın:
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## Önemli Notlar
+
+### Mail Doğrulaması
+
+- Kullanıcı kaydı sonrası gönderilen doğrulama e-postası, hesabın aktif hale gelmesi için zorunludur.
+- Mail doğrulaması yapılmadan kullanıcı uygulamaya tam erişim sağlayamaz.
+- Mail doğrulama linki tek kullanımlıktır ve süresi sınırlıdır.
+
+### JWT Güvenliği
+
+- JWT tokenları güvenli `HttpOnly` ve `Secure` cookie olarak saklanmalıdır.
+- JWT içerisinde hassas kullanıcı bilgileri (şifre, kredi kartı vb.) kesinlikle yer almamalıdır.
+- Token süre aşımı (expiration) mutlaka uygulanmalıdır.
+- Tokenlar, yalnızca yetkilendirilmiş isteklerde kullanılmalıdır.
+- XSS ve CSRF saldırılarına karşı ekstra önlemler alınmalıdır.
+
+---
+
+## Kullanılan Teknolojiler
+
+- Next.js
+- React
+- Tailwind CSS
+- JSON Web Tokens (JWT)
+- Node.js (backend)
+- Netlify (hosting)
+
+---
+
+## Katkıda Bulunma
+
+Katkı sağlamak isterseniz, lütfen `pull request` gönderin ya da `issue` açın.
+
+---
+
+## Lisans
+
+MIT License © 2025 Ömer Faruk Uysal
