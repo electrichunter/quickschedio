@@ -1,5 +1,5 @@
 'use client';
-import { FaCheck, FaStar, FaQuestionCircle, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaCheck, FaQuestionCircle, FaPhone, FaEnvelope } from 'react-icons/fa';
 import Footer  from "@/app/component/footer"
 import Navbar from "@/app/component/menu";
 

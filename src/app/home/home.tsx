@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { FaCalendarAlt, FaBell, FaCog, FaArrowRight, FaCheck } from "react-icons/fa";
- 
 
 export default function HomePage() {
   return (
@@ -17,14 +16,14 @@ export default function HomePage() {
             zaman kaybına son verin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="/signup" 
+            <a
+              href="/signup"
               className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center"
             >
               Hemen Başla <FaArrowRight className="ml-2" />
             </a>
-            <a 
-              href="#features" 
+            <a
+              href="#features"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center"
             >
               Özellikleri Gör
@@ -59,7 +58,7 @@ export default function HomePage() {
             QuickSchedio ile işlerinizi kolaylaştıracak tüm araçlar bir arada
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
             <div className="text-blue-500 mb-4">
@@ -95,14 +94,14 @@ export default function HomePage() {
       <section className="py-20 px-8 md:px-16 lg:px-32 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Müşterilerimiz Ne Diyor?</h2>
-          
+
           <div className="mb-8">
             <p className="text-xl italic mb-6">
-              "QuickSchedio sayesinde randevu yönetimi artık çok kolay. Müşterilerim kendi randevularını oluşturabiliyor ve ben de zamanımı çok daha verimli kullanabiliyorum."
+              &quot;QuickSchedio sayesinde randevu yönetimi artık çok kolay. Müşterilerim kendi randevularını oluşturabiliyor ve ben de zamanımı çok daha verimli kullanabiliyorum.&quot;
             </p>
             <p className="font-bold">- Ayşe K., Kuaför Salonu Sahibi</p>
           </div>
-          
+
           <div className="flex justify-center gap-2 mb-12">
             {[1, 2, 3].map((dot) => (
               <div key={dot} className="w-3 h-3 rounded-full bg-white opacity-50"></div>
@@ -119,21 +118,23 @@ export default function HomePage() {
             İhtiyacınıza göre seçebileceğiniz esnek planlar
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {[
             { name: "Başlangıç", price: "₺99", features: ["100 randevu/ay", "Temel bildirimler", "Email desteği"] },
-            { 
-              name: "Profesyonel", 
-              price: "₺199", 
+            {
+              name: "Profesyonel",
+              price: "₺199",
               features: ["Sınırsız randevu", "SMS bildirimleri", "Öncelikli destek", "Takvim entegrasyonu"],
-              popular: true
+              popular: true,
             },
-            { name: "Kurumsal", price: "Özel Fiyat", features: ["Çoklu kullanıcı", "API erişimi", "Özel entegrasyonlar", "Dedike destek"] }
+            { name: "Kurumsal", price: "Özel Fiyat", features: ["Çoklu kullanıcı", "API erişimi", "Özel entegrasyonlar", "Dedike destek"] },
           ].map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 ${plan.popular ? "border-2 border-purple-500" : "border border-gray-200"}`}
+            <div
+              key={index}
+              className={`relative p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 ${
+                plan.popular ? "border-2 border-purple-500" : "border border-gray-200"
+              }`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white text-xs font-bold px-4 py-1 rounded-full">
@@ -150,11 +151,11 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <button className={`w-full py-3 rounded-lg font-semibold transition duration-300 ${
-                plan.popular 
-                  ? "bg-purple-500 hover:bg-purple-600 text-white" 
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-              }`}>
+              <button
+                className={`w-full py-3 rounded-lg font-semibold transition duration-300 ${
+                  plan.popular ? "bg-purple-500 hover:bg-purple-600 text-white" : "bg-gray-100 hover:bg-gray-200 text-gray-800"
+                }`}
+              >
                 Hemen Başla
               </button>
             </div>
@@ -169,17 +170,14 @@ export default function HomePage() {
           <p className="text-xl mb-8 text-gray-300">
             14 gün ücretsiz deneyin. Kredi kartı bilgisi gerekmez.
           </p>
-          <a 
-            href="/signup" 
+          <a
+            href="/signup"
             className="inline-block bg-white text-gray-900 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300"
           >
             Ücretsiz Deneme Başlat
           </a>
         </div>
       </section>
-
- 
-     
     </main>
   );
 }

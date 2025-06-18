@@ -67,10 +67,14 @@ export default function LoginRegisterPage() {
                 // Kayıt başarılıysa kullanıcıya mesaj göster
                 setMessage('Registration successful!');
             }
-        } catch (err: any) {
-            // Hata durumunda kullanıcıya gösterilecek mesaj
-            setMessage(err.message);
-        }
+} catch (err: unknown) {
+  if (err instanceof Error) {
+    setMessage(err.message);
+  } else {
+    setMessage('Bilinmeyen bir hata oluştu');
+  }
+}
+
     };
 
     return (
